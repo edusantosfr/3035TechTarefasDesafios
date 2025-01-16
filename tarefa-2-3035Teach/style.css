@@ -1,0 +1,54 @@
+:root {
+    font-family: "Quicksand", serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+table {
+    border-bottom: 2.5px solid;
+    border-color: rgb(45, 151, 122);
+    background: rgb(45, 151, 122);
+    border-collapse: collapse;
+    border-radius: 6px 6px 0px 0px;
+}
+
+table td, table th{
+    border: none;
+}
+
+tbody {
+    background-color: white;
+}
+
+th {
+    width: 105px;
+    height: 42px;
+    text-align: left;
+    color: white;
+}
+
+td {
+    width: 105px;   
+    height: 42px;
+}
+
+tbody tr {
+    border-bottom: 1.5px solid rgb(218, 218, 218);
+}
+
+.coluna1 {
+    padding-left: 15px;
+    width: 85px;
+}
+
+.colunaMeio {
+    background-color: rgb(243, 243, 243);
+    color: rgb(45, 151, 122);
+    font-weight: 900;
+}
