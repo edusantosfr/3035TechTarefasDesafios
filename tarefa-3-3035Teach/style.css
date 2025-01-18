@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Lexend:wght@100..900&family=M+PLUS+Rounded+1c&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,40 +10,57 @@
 }
 
 :root {
-    --body-color: rgb(226, 226, 226);
+    --body-color: rgb(240, 240, 240);
+    font-family: "Quicksand", serif;
+    --title-font: "Lexend Giga", serif;
 }
 
 /* GRID */
-    
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 240px 1fr 100px;
+    grid-template-rows: 16.5rem 25rem 1fr 100px;
 
-    grid-template-areas: 
+    grid-template-areas:
         "head"
+        "images-carousel"
         "main"
         "footer"
     ;
 
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    background: rgb(224, 224, 224);
 }
 
 #head {
     grid-area: head;
     background-color: var(--body-color);
+
+    width: 78rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#main { 
+#images-carousel {
+    grid-area: images-carousel;
+}
+
+#main {
     grid-area: main;
     background-color: var(--body-color);
+
+    width: 78rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer {
     grid-area: footer;
-    background-color: var(--body-color);
+    background-color: rgb(71, 71, 71);
+
+    width: 78rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* HEADER */
@@ -49,7 +70,7 @@ header {
     text-align: center;
 }
 
-#sponsors{
+#sponsors {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -61,15 +82,17 @@ h4 {
     align-items: center;
 }
 
-#icons img{
+#icons img {
     margin: 10px;
     height: 30px;
     width: 30px;
 }
 
 #logo {
+    font-family: var(--title-font);
     border-top: 1px solid rgb(179, 179, 179);
     border-bottom: 1px solid rgb(179, 179, 179);
+    font-weight: 600;
 }
 
 #logo a {
@@ -88,6 +111,9 @@ h4 {
 #navigation a {
     text-decoration: none;
     color: black;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
 }
 
 /* MAIN */
@@ -95,13 +121,58 @@ h4 {
 #demonstration-images {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    height: 25rem;
+    background: rgb(238, 238, 238);
 }
 
-#demonstration-images img {
-    width: 635px;
+#content {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64rem;
 }
 
-.images img{
-    width: 400px;
+.card {
+    display: flex;
+    margin-top: 30px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.images img {
+    width: 33rem;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.text {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 33rem;
+    margin-bottom: 30px;
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    line-height: 1.7;
+}
+
+.text h2 {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.text h3 {
+    font-family: var(--title-font);
+    font-weight: 300;
+}
+
+/* FOOTER */
+
+#footer-container {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    display: flex;
+    text-align: center;
 }
