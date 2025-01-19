@@ -10,9 +10,14 @@
 }
 
 :root {
+    --border-color: rgb(179, 179, 179);
     --body-color: rgb(240, 240, 240);
     font-family: "Quicksand", serif;
     --title-font: "Lexend Giga", serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* GRID */
@@ -20,7 +25,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 16.5rem 25rem 1fr 100px;
+    grid-template-rows: 16rem 25rem 1fr 8rem;
 
     grid-template-areas:
         "head"
@@ -80,18 +85,19 @@ header {
 h4 {
     display: flex;
     align-items: center;
+    font-weight: 500;
 }
 
 #icons img {
     margin: 10px;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 }
 
 #logo {
     font-family: var(--title-font);
-    border-top: 1px solid rgb(179, 179, 179);
-    border-bottom: 1px solid rgb(179, 179, 179);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     font-weight: 600;
 }
 
@@ -112,8 +118,8 @@ h4 {
     text-decoration: none;
     color: black;
     padding: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 900;
+    font-size: medium;
 }
 
 /* MAIN */
@@ -122,7 +128,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     height: 25rem;
-    background: rgb(238, 238, 238);
+    background: white;
 }
 
 #content {
@@ -132,34 +138,70 @@ h4 {
     width: 64rem;
 }
 
+/* CARDS */
+
+#main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+#cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35rem;
+
+    grid-template-areas:
+        "card1 card2"
+    ;
+
+    justify-items: center;
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: var(--body-color);
+}
+
+.card2 {
+    grid-area: card2;
+    background-color: var(--body-color);
+}
+
 .card {
     display: flex;
-    margin-top: 30px;
-    border-bottom: 1px solid rgb(179, 179, 179);
+    flex-direction: column;
+    width: 28rem;
+    height: 31rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
 }
 
 .images img {
-    width: 33rem;
+    display: flex;
+    justify-content: space-between;
+    width: 26rem;
     border-radius: 10px;
-    margin-left: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .text {
     display: flex;
-    gap: 15px;
+    width: 24rem;
     flex-direction: column;
-    width: 33rem;
-    margin-bottom: 30px;
     text-align: justify;
     justify-content: center;
     align-content: center;
     line-height: 1.7;
 }
 
-.text h2 {
+h2 {
     font-family: var(--title-font);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 400;
 }
 
@@ -168,11 +210,69 @@ h4 {
     font-weight: 300;
 }
 
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .text{
+    width: 50rem;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
 /* FOOTER */
 
 #footer-container {
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
+    background: rgb(71, 71, 71);
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     text-align: center;
+    margin-top: 0.6rem;
+    color: white;
+}
+
+#footer-container a {
+    background: rgb(71, 71, 71);
+    text-decoration: none;
+    color: white;
+    font-family: var(--title-font);
+    font-size: 2.3rem;
+    margin: 0.5rem;
+}
+
+#footer-container p {
+    background: rgb(71, 71, 71);
+}
+
+@media screen and (max-width: 1840px) {
+    body {
+        grid-template-columns: 1fr;    
+    }
+    .image-aside {
+        display: none;
+    }
+    #demonstration-images {
+        display: flex; 
+        justify-content: center; 
+        background: rgb(224, 224, 224);
+        height: 31rem;
+    }
 }
