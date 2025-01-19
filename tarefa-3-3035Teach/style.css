@@ -416,19 +416,19 @@ h2 {
     #head {
         background-color: var(--body-color);
 
-        width: 50rem;
+        width: 48rem;
         margin-left: auto;
         margin-right: auto;
     }
 
     #images-carousel img{
-        width: 48rem;
+        width: 45rem;
     }
 
     #main {
         background-color: var(--body-color);
 
-        width: 50rem;
+        width: 48rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -437,14 +437,14 @@ h2 {
         margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
-        width: 50rem;
+        width: 48rem;
     }
 
     #footer {
         background-color: rgb(71, 71, 71);
 
         height: 12rem;
-        width: 50rem;
+        width: 48rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -459,8 +459,218 @@ h2 {
         width: 41rem;
     }
 
+    .video-container {
+        margin-bottom: 1rem;
+    }
 
     .video-container video {
         width: 45rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        grid-template-rows: 13.5rem 20rem 1fr 8rem;
+    }
+    
+    #head {
+        background-color: var(--body-color);
+
+        width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #images-carousel img{
+        height: 20rem;
+        width: 38rem;
+    }
+
+    #main {
+        background-color: var(--body-color);
+
+        width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40rem;
+    }
+
+    #cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 36rem;
+    
+        grid-template-areas:
+            "card1"
+            "card2"
+        ;
+    
+        justify-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 34rem;
+        height: 34rem;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+    }
+    
+    .images img {
+        display: flex;
+        justify-content: space-between;
+        width: 32rem;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .text {
+        display: flex;
+        width: 30rem;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        align-content: center;
+        line-height: 1.7;
+    }
+
+    #footer {
+        background-color: rgb(71, 71, 71);
+
+        height: 12rem;
+        width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo a {
+        text-decoration: none;
+        font-size: 5.5rem;
+        color: black;
+    }
+
+    #about .text {
+        width: 33rem;
+    }
+
+    .video-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .video-container video {
+        width: 36rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-rows: 13.5rem 20rem 1fr 8rem;
+    }
+    
+    #head {
+        background-color: var(--body-color);
+
+        width: 36rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #images-carousel img{
+        height: 20rem;
+        width: 38rem;
+    }
+
+    #main {
+        background-color: var(--body-color);
+
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30rem;
+    }
+
+    #cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 36rem;
+    
+        grid-template-areas:
+            "card1"
+            "card2"
+        ;
+    
+        justify-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        height: 34rem;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+    }
+    
+    .images img {
+        display: flex;
+        justify-content: space-between;
+        width: 30rem;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .text {
+        display: flex;
+        width: 30rem;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        align-content: center;
+        line-height: 1.7;
+    }
+
+    #footer {
+        background-color: rgb(71, 71, 71);
+
+        height: 12rem;
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo a {
+        text-decoration: none;
+        font-size: 5.5rem;
+        color: black;
+    }
+
+    #about .text {
+        width: 30rem;
+    }
+
+    .video-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .video-container video {
+        width: 30rem;
     }
 }
