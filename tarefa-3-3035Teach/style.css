@@ -224,8 +224,8 @@ h2 {
     align-items: center;
 }
 
-#about .text{
-    width: 50rem;
+#about .text {
+    width: 55rem;
 }
 
 .video-container {
@@ -234,6 +234,11 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+.video-container video {
+    width: 68rem;
 }
 
 /* FOOTER */
@@ -264,15 +269,198 @@ h2 {
 
 @media screen and (max-width: 1840px) {
     body {
-        grid-template-columns: 1fr;    
+        grid-template-columns: 1fr;
     }
+
     .image-aside {
         display: none;
     }
+
     #demonstration-images {
-        display: flex; 
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         background: rgb(224, 224, 224);
         height: 31rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    #head {
+        background-color: var(--body-color);
+
+        width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #images-carousel img{
+        width: 58rem;
+    }
+
+    #main {
+        background-color: var(--body-color);
+
+        width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60rem;
+    }
+
+    #footer {
+        background-color: rgb(71, 71, 71);
+
+        height: 12rem;
+        width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #footer-container a {
+        font-size: 4rem;
+        margin: 0.8rem;
+    }
+
+    header {
+        align-content: center;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    #navigation a {
+        font-size: 1.3rem;
+    }
+    
+
+    #cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40rem;
+    
+        grid-template-areas:
+            "card1"
+            "card2"
+        ;
+    
+        justify-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 45rem;
+        height: 38rem;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+    }
+    
+    .images img {
+        display: flex;
+        justify-content: space-between;
+        width: 43rem;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .text {
+        display: flex;
+        width: 40rem;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        align-content: center;
+        line-height: 1.7;
+    }
+
+    .card2 {
+        margin-bottom: 2rem;
+    }
+
+    #main-title h2 {
+        font-family: var(--title-font);
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    #about .text {
+        width: 50rem;
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    .video-container video {
+        width: 55rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .container {
+        grid-template-rows: 14rem 25rem 1fr 8rem;
+    }
+    
+    #head {
+        background-color: var(--body-color);
+
+        width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #images-carousel img{
+        width: 48rem;
+    }
+
+    #main {
+        background-color: var(--body-color);
+
+        width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #content {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50rem;
+    }
+
+    #footer {
+        background-color: rgb(71, 71, 71);
+
+        height: 12rem;
+        width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo a {
+        text-decoration: none;
+        font-size: 6rem;
+        color: black;
+    }
+
+    #about .text {
+        width: 41rem;
+    }
+
+
+    .video-container video {
+        width: 45rem;
     }
 }
